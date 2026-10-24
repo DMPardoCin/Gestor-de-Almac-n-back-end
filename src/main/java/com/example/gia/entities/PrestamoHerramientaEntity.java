@@ -1,5 +1,7 @@
 package com.example.gia.entities;
 
+import java.time.LocalDate;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
@@ -11,8 +13,8 @@ import lombok.Data;
 @Table(name="Prestamo_herramienta")
 public class PrestamoHerramientaEntity extends BaseEntity{
 
-    private String fechaPrestamo;
-    private String fechaDevolucion;
+    private LocalDate fechaPrestamo;
+    private LocalDate fechaDevolucion;
     private String observaciones;
 
     @ManyToOne 
