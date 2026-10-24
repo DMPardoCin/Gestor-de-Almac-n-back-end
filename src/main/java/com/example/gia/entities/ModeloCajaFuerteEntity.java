@@ -1,7 +1,11 @@
 package com.example.gia.entities;
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 import jakarta.persistence.Entity;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.Data;
 
@@ -17,6 +21,7 @@ public class ModeloCajaFuerteEntity extends BaseEntity{
     private Double alto;
     private Double ancho;
 
-    
+    @OneToMany (mappedBy = "modelo")
+    private List<CajaFuerteEntity> cajasFuertes=new ArrayList<>();
 
 }

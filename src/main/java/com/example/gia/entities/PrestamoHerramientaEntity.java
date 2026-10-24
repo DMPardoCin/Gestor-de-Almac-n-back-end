@@ -19,7 +19,7 @@ public class PrestamoHerramientaEntity extends BaseEntity{
     @JoinColumn(name="id_empleado")
     private EmpleadoEntity empleado;
     @ManyToOne 
-    @JoinColumn(name="id_empleado")
+    @JoinColumn(name="id_herramienta")
     private HerramientaEntity herramienta;
 
 

@@ -1,6 +1,8 @@
 package com.example.gia.entities;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.Data;
@@ -13,7 +15,8 @@ public class CajaFuerteEntity extends BaseEntity{
     private EstadoCajaFuerte estado;
     private String observaciones;
 
-    @OneToOne 
-    private ModeloCajaFuerteEntity referencia;
+    @ManyToOne 
+    @JoinColumn (name="referencia") 
+    private ModeloCajaFuerteEntity modelo;
 
 }

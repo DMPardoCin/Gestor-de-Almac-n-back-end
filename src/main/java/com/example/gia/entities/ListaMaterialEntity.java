@@ -9,16 +9,11 @@ import lombok.Data;
 @Data
 @Entity
 @Table(name="Lista_material")
-public class ListaMaterialEntity extends BaseEntity{
-
-    @ManyToOne
-    @JoinColumn(name="id_modelo")
-    private ModeloCajaFuerteEntity modelo;
+public class ListaMaterialEntity extends ListaEntity{
 
     @ManyToOne
     @JoinColumn(name="id_material")
     private MaterialEntity material;
 
-    private int cantidad;
 
 }
